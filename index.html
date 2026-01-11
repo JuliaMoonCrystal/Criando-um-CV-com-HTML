@@ -1,360 +1,526 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <title>Julia Farias da Rocha | Desenvolvedora FullStack</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<head>
-  <title>Julia Farias da Rocha</title>
+    <style>
+      body {
+        background-color: #f5f7fa;
+        font-family: "Roboto", sans-serif;
+      }
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      .header-gradient {
+        background: linear-gradient(90deg, #008080 0%, #004d4d 100%);
+        color: white;
+        padding: 40px 20px;
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 30px;
+      }
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      .profile-img {
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-width: 180px;
+      }
 
-  <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif;
-    }
-  </style>
-</head>
+      .w3-card-4 {
+        border-radius: 12px;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+      }
 
-<body class="w3-light-grey" cz-shortcut-listen="true">
-  <!-- Page Container -->
-  <div class="w3-content w3-margin-top" style="max-width: 1400px">
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-      <!-- Left Column -->
-      <div class="w3-third">
-        <div class="w3-white w3-text-grey w3-card-4">
-          <img src="https://avatars.githubusercontent.com/u/47614833?v=4" width="100%" style="border-radius: 50%" />
-          <div class="w3-container">
-            <h2>Julia Farias da Rocha</h2>
-          </div>
-          <div class="w3-container">
-            <p>
-              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Desenvolvedora FullStack
-              Node.js/Angular.js JR.
-            </p>
-            <!--<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>LOCAL</p>-->
-            <p>
-              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>jufarias20002@gmail.com
-            </p>
-            <p>
-              <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(11) 94541-4231
-            </p>
-            <hr />
+      .skill-tag {
+        display: inline-block;
+        padding: 5px 12px;
+        margin: 4px;
+        border-radius: 20px;
+        background: #e0f2f1;
+        color: #00796b;
+        font-size: 13px;
+        font-weight: 500;
+      }
 
-            <p class="w3-large">
-              <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Hard Skills</b>
-            </p>
-            <p>° Lógica de Programação</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <p>° Banco de Dados Relacionais: MySQL e SQL
-              SERVER</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <p>° Banco de Dados Não Relacionais: MongoDB</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <p>° Java</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
+      .section-title {
+        border-left: 5px solid #008080;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        color: #333;
+      }
 
-            <p>° Spring Boot Framework</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
+      .job-item {
+        border-left: 2px solid #ddd;
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .job-item::before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #008080;
+      }
 
-            <p>° Angular.js</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
+      .project-card {
+        transition: 0.3s;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-            <p>° Node.js</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <br />
+      .btn-group {
+        display: flex;
+        gap: 5px;
+        padding: 0 8px 12px 8px;
+      }
+      .btn-group a {
+        flex: 1;
+        text-align: center;
+      }
 
-            <p class="w3-large">
-              <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Soft Skills</b>
-            </p>
-            <p>° Comunicação</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <p>° Proatividade</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <!-- <p>TODO</p> -->
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <p>° Atenção à Detalhes</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
 
-            <p>° Trabalho em Equipe</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width: 50%">
-                50%
-              </div>
-            </div> -->
-            <br />
-
-            <p class="w3-large w3-text-theme">
-              <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
-            </p>
-            <p>° Inglês: Intermediário</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 50%"></div>
-            </div> -->
-            <p>° Italiano: Básico</p>
-            <!-- <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 50%"></div>
-            </div> -->
-            <!-- <p>TODO</p> -->
-            <!-- <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height: 24px; width: 50%"></div>
-            </div> -->
-            <br />
+  <body>
+    <header class="w3-content header-gradient w3-card-4">
+      <div class="w3-row-padding">
+        <div class="w3-third w3-center">
+          <img
+            src="https://avatars.githubusercontent.com/u/47614833?v=4"
+            class="w3-circle profile-img"
+            alt="Julia Farias"
+          />
+        </div>
+        <div class="w3-twothird">
+          <h1 class="w3-xxlarge"><b>Julia Farias da Rocha</b></h1>
+          <h4 class="w3-opacity" style="letter-spacing: 2px">
+            DESENVOLVEDORA FULLSTACK PLENO.
+          </h4>
+          <div class="w3-margin-top">
+            <span class="w3-margin-right"
+              ><i class="fa fa-envelope fa-fw"></i>
+              jufarias20002@gmail.com</span
+            >
+            <span class="w3-margin-right"
+              ><i class="fa fa-linkedin fa-fw"></i>Julia Farias</span
+            >
+            <br class="w3-hide-small" />
+            <span><i class="fa fa-map-marker fa-fw"></i> São Paulo, SP</span>
           </div>
         </div>
-        <br />
-
-        <!-- End Left Column -->
       </div>
+    </header>
 
-      <!-- Right Column -->
-      <div class="w3-twothird">
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre
-          </h2>
-          <p style="text-align: justify;">
-            Meu nome é Julia Farias da Rocha, eu tenho 23 anos, sou natural de
-            São Paulo. Durante a minha infância minha mãe sempre me incentivou
-            a aprender um pouco informática porque ela dizia que seria
-            importante para mim no futuro.Em 2018 eu consegui passar no
-            vestibular e fazer o curso de análise e desenvolvimento de
-            sistemas onde eu aprendi java, SQL SERVER e engenharia de software
-            e desenvolvi projetos para gestão de livros e classificação de
-            níveis de poluição do ar por região usando java.
-          </p>
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
-          </h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity">
-              <b>Desenvolvedora FullStack Node.js/Angular.js</b>
-            </h5>
-            <h6 class="w3-text-teal">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO -
-              20/12/2021
-              <span class="w3-tag w3-teal w3-round">Atual</span>
-            </h6>
-            <hr />
-          </div>
-        </div>
-
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
-          </h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>GENERATION BRASIL</b></h5>
-            <h6 class="w3-text-teal">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - Agosto/2021
-              <span class="w3-tag w3-teal w3-round">FIM - Novembro/2021</span>
-            </h6>
-            <h5 style="text-align: justify;">
-              Curso: Desenvolvedor Web Java Junior – Fullstack
-            </h5>
-            <p style="text-align: justify;">
-              A Generation é uma organização sem fins lucrativos e independente com a missão de transformar sistemas de
-              educação para o emprego para preparar, inserir no mercado e apoiar pessoas em carreiras que transformem
-              suas vidas e que, de outra forma, seriam inacessíveis.
-            </p>
-
-            <hr />
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>FATEC DA ZONA LESTE</b></h5>
-            <h6 class="w3-text-teal">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - Fevereiro/2018
-              <span class="w3-tag w3-teal w3-round">FIM - Julho/2022</span>
-            </h6>
-            <h5 style="text-align: justify;">
-              Curso: Análise e desenvolvimento de Sistemas
-            </h5>
-            <p style="text-align: justify;">
-              O Tecnólogo em Análise e Desenvolvimento de Sistemas analisa, projeta, documenta, especifica, testa,
-              implanta e mantém sistemas computacionais de informação. Esse profissional trabalha, também, com
-              ferramentas computacionais, equipamentos de informática e metodologia de projetos na produção de sistemas.
-              Raciocínio lógico, emprego de linguagens de programação e de metodologias de construção de projetos,
-              preocupação com a qualidade, usabilidade, robustez, integridade e segurança de programas computacionais
-              são fundamentais à atuação desse profissional.
+    <div class="w3-content" style="max-width: 1400px">
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <div
+            class="w3-white w3-card-4 w3-container w3-padding-24 w3-margin-bottom"
+          >
+            <h3 class="section-title">Sobre Mim</h3>
+            <p class="w3-text-grey" style="text-align: justify">
+              Desenvolvedora com sólida base em Análise e Desenvolvimento de
+              Sistemas pela FATEC. Especialista em arquitetura Full Stack e
+              apaixonada por Segurança da Informação. Experiência no ecossistema
+              JavaScript e Java, focada em criar soluções eficientes e
+              escaláveis.
             </p>
           </div>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Faculdade Descomplica</b></h5>
-            <h6 class="w3-text-teal">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - Julho/2023
-              <span class="w3-tag w3-teal w3-round">FIM - Junho/2025</span>
-            </h6>
-            <h5 style="text-align: justify;">
-              Curso: Pós-Graduação em Desenvolvimento Full Stack
-            </h5>
-            <p style="text-align: justify;">
-              O Curso de Especialização em Desenvolvimento Full Stack é uma oportunidade excepcional para aqueles que
-              desejam se tornar especialistas na criação de aplicações web abrangentes, desde o desenvolvimento do lado
-              do servidor até a interface do usuário interativa. Este programa aprofundado e prático oferece uma
-              compreensão abrangente das tecnologias e habilidades necessárias para se destacar no mundo do
-              desenvolvimento full stack.
-            </p>
-          </div>
+          <div
+            class="w3-white w3-card-4 w3-container w3-padding-24 w3-margin-bottom"
+          >
+            <h3 class="section-title">Hard Skills</h3>
+            <div class="w3-padding-small">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Angular.js</span>
+              <span class="skill-tag">Next</span>
+              <span class="skill-tag">Vue</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">My SQL</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">aws</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Godot</span>
+              <span class="skill-tag">GameMaker</span>
+            </div>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Faculdade Descomplica</b></h5>
-            <h6 class="w3-text-teal">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - Junho/2025
-              <span class="w3-tag w3-teal w3-round">FIM (Previsto) - Junho/2026</span>
-            </h6>
-            <h5 style="text-align: justify;">
-              Curso: MBA em Segurança da informação
-            </h5>
-            <p style="text-align: justify;">
-              O MBA em Segurança da Informação é uma formação essencial para profissionais que desejam se especializar
-              na proteção de dados, redes e sistemas em ambientes digitais cada vez mais complexos. Este programa
-              abrangente e prático prepara os alunos para enfrentar os principais desafios da segurança cibernética,
-              combinando fundamentos técnicos, estratégias de gestão e aspectos legais da área.
-            </p>
+            <h3 class="section-title w3-margin-top">Soft Skills</h3>
+            <div class="w3-padding-small">
+              <span class="skill-tag">Comunicação</span>
+              <span class="skill-tag">Proatividade</span>
+              <span class="skill-tag">Trabalho em Equipe</span>
+              <span class="skill-tag">Atenção a Detalhes</span>
+            </div>
+
+            <h3 class="section-title w3-margin-top">Idiomas</h3>
+            <p class="w3-small"><b>INGLÊS</b> - Intermediário</p>
+            <div
+              class="w3-light-grey w3-round-xlarge w3-small w3-margin-bottom"
+            >
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 80%"
+              >
+                80%
+              </div>
+            </div>
+            <p class="w3-small"><b>ITALIANO</b> - Básico</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 30%"
+              >
+                30%
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
-          </h2>
-          <div class="w3-container">
-            <h6 class="w3-text-teal">
-              <i class="fa fa-github fa-fw w3-margin-right" style="size: 50px;"></i>
-              <a href="https://github.com/JuliaMoonCrystal" target="_blank">
-                Meu GitHub: Julia Farias da Rocha </a>
-            </h6>
-            <p>Projeto: Acácia</p>
-            <p style="text-align: justify;">Descrição: Uma rede social vinculada
-              a uma empresa de saneamento básico onde o
-              propósito é levar esgoto tratado ao local para
-              que tenha reutilização de água.</p>
-            <a href="https://github.com/JuliaMoonCrystal/Projeto-Integrador" target="_blank">
-              Link do Projeto </a>
-            <hr />
-
-            <p>Projeto: Semana-Frront-end - Stranger Things Vol. 4</p>
-            <p style="text-align: justify;">Descrição: Três dias de imersão no HTML, CSS E Javascript oferecidos pela
-              Digital Innovation One (DIO).
-              Construimos um site com o Tema Mundo Invertido</p>
-            <a href="https://github.com/JuliaMoonCrystal/Semana-Frront-end" target="_blank">
-              Link do Projeto no GitHub</a>
-            <br>
-            <a href="https://juliamooncrystal.github.io/Semana-Frront-end/" target="_blank">
-              Link do Projeto na web</a>
-            <hr />
-
-            <p>Projeto:Semana Dev em Dobro: One Piece</p>
-            <p style="text-align: justify;">
-              Projeto feito durante a semana Dev em Dobro. O tema desse evento foi One Piece.
-              .</p>
-            <a href="https://github.com/JuliaMoonCrystal/Semana-Dev-em-Dobro-One-Piece" target="_blank">
-              Link do Projeto no GitHub</a>
-            <br>
-            <a href="https://juliamooncrystal.github.io/Semana-Dev-em-Dobro-One-Piece/" target="_blank">
-              Link do Projeto na web</a>
-            <hr />
-
-            <p>Projeto:ÍNDICE DE QUALIDADE DO AR</p>
-            <p style="text-align: justify;">Descrição: Desenvolvi junto com os meus colegas da faculdade um sistema de
-              gerenciamento de
-              índices de qualidade do ar por regiões que tinha o
-              foco no uso de estruturas de dados durante o
-              desenvolvimento.</p>
-            <a href="https://github.com/JuliaMoonCrystal/Trabalho_Estrutura_de_Dados" target="_blank">
-              Link do Projeto no GitHub</a>
-            <br>
-            <hr />
+        <div class="w3-twothird">
+          <div
+            class="w3-white w3-card-4 w3-container w3-padding-24 w3-margin-bottom"
+          >
+            <h3 class="section-title">
+              <i class="fa fa-suitcase w3-margin-right w3-text-teal"></i
+              >Experiência
+            </h3>
+            <div class="job-item">
+              <h5 class="w3-opacity">
+                <b>Desenvolvedora FullStack Node.js/Angular.js</b>
+              </h5>
+              <h6 class="w3-text-teal">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Dez 2021 -
+                <span class="w3-tag w3-teal w3-round">Atual</span>
+              </h6>
+              <p>
+                Atuação no ciclo completo de desenvolvimento de software, desde
+                a manutenção de APIs em Node.js até a interface em Angular.js.
+              </p>
+            </div>
           </div>
 
-          <!-- <div class="w3-container">
-            <h6 class="w3-text-teal">
-              <i class="fa fa-gitlab fa-fw w3-margin-right"></i>
-              <a href="LINK_GITLAB" target="_blank">USUARIO_GITLAB/REPO</a>
-            </h6>
-          </div> -->
-        </div>
+          <div
+            class="w3-white w3-card-4 w3-container w3-padding-24 w3-margin-bottom"
+          >
+            <h3 class="section-title">
+              <i class="fa fa-graduation-cap w3-margin-right w3-text-teal"></i
+              >Educação
+            </h3>
+            <div class="w3-container w3-padding-small">
+              <h5 class="w3-opacity"><b>MBA em Segurança da Informação</b></h5>
+              <p class="w3-text-teal">
+                Faculdade Descomplica | 2025 - 2026 (Em curso)
+              </p>
+              <hr />
+            </div>
+            <div class="w3-container w3-padding-small">
+              <h5 class="w3-opacity">
+                <b>Pós-Graduação em Desenvolvimento Full Stack</b>
+              </h5>
+              <p class="w3-text-teal">Faculdade Descomplica | 2023 - 2025</p>
+              <hr />
+            </div>
+            <div class="w3-container w3-padding-small">
+              <h5 class="w3-opacity">
+                <b>Análise e Desenvolvimento de Sistemas</b>
+              </h5>
+              <p class="w3-text-teal">FATEC Zona Leste | 2018 - 2022</p>
+            </div>
+          </div>
 
-        <!-- End Right Column -->
+          <div class="w3-white w3-card-4 w3-container w3-padding-24">
+            <h3 class="section-title">
+              <i class="fa fa-code w3-margin-right w3-text-teal"></i>Destaque de
+              Projetos
+            </h3>
+
+            <div class="w3-row-padding">
+              <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-leaf"></i> Projeto Acácia</b>
+                    </h6>
+                    <p class="w3-small w3-text-grey">
+                      Rede social para gestão de saneamento e reuso de água. O
+                      nosso software vai permitir que os usuários criem uma
+                      conta e relatem ou postem informações sobre áreas que não
+                      estejam tendo um abastecimento adequado de água encanada e
+                      locais que não tenham um tratamento adequado do esgoto. E,
+                      a partir dessas informações, vamos gerar um relatório para
+                      ilustrar os dados.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >React.js</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >Spring Boot</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >My SQL</span
+                      >
+                    </div>
+                  </div>
+                  <div class="w3-container w3-margin-bottom">
+                    <a
+                      href="https://github.com/JuliaMoonCrystal/Projeto-Integrador"
+                      target="_blank"
+                      class="w3-button w3-block w3-teal w3-round w3-small"
+                      ><i class="fa fa-github"></i> Repositório</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                  style="background-color: #f9fdfd"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-rocket"></i>Sobrevivencia-Brasil</b>
+                    </h6>
+                    <p
+                      class="w3-small w3-text-grey"
+                      style="text-align: justify"
+                    >
+                      Um simulador de sobrevivência progressivo ambientado em um
+                      Brasil pós-apocalíptico, focado em realismo sistêmico,
+                      gestão de base e progressão de personagens.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >Next.js</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >Godot</span
+                      >
+                    </div>
+                  </div>
+                  <!-- <div class="w3-container w3-margin-bottom">
+                    <a
+                      href="URL_DO_SEU_SITE_AQUI"
+                      target="_blank"
+                      class="w3-button w3-block w3-teal w3-round w3-small"
+                    >
+                      <i class="fa fa-external-link"></i> Acessar Plataforma
+                    </a>
+                  </div> -->
+                </div>
+              </div>
+
+              <!-- <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                  style="background-color: #f9fdfd"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-rocket"></i> Nome do Seu Produto</b>
+                    </h6>
+                    <p
+                      class="w3-small w3-text-grey"
+                      style="text-align: justify"
+                    >
+                      Solução SaaS desenvolvida com **Next.js** e focado em
+                      performance e escalabilidade. Projeto proprietário com
+                      arquitetura robusta e foco na experiência do usuário.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >Next.js</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >TypeScript</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >SaaS</span
+                      >
+                    </div>
+                  </div>
+                  <div class="w3-container w3-margin-bottom">
+                    <a
+                      href="URL_DO_SEU_SITE_AQUI"
+                      target="_blank"
+                      class="w3-button w3-block w3-teal w3-round w3-small"
+                    >
+                      <i class="fa fa-external-link"></i> Acessar Plataforma
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-cloud"></i> Qualidade do Ar</b>
+                    </h6>
+                    <p class="w3-small w3-text-grey">
+                      Gerenciamento de índices atmosféricos focando em
+                      Estruturas de Dados.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >Java</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >SQL Server</span
+                      >
+                    </div>
+                  </div>
+                  <div class="w3-container w3-margin-bottom">
+                    <a
+                      href="https://github.com/JuliaMoonCrystal/Trabalho_Estrutura_de_Dados"
+                      target="_blank"
+                      class="w3-button w3-block w3-teal w3-round w3-small"
+                      ><i class="fa fa-github"></i> Repositório</a
+                    >
+                  </div>
+                </div>
+              </div>
+             
+          
+            </div>
+
+            <div class="w3-row-padding">
+              <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-anchor"></i> One Piece Page</b>
+                    </h6>
+                    <p class="w3-small w3-text-grey">
+                      Página interativa com foco em manipulação de DOM e
+                      animações.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >JS Vanilla</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >CSS3</span
+                      >
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <a
+                      href="https://github.com/JuliaMoonCrystal/Semana-Dev-em-Dobro-One-Piece"
+                      target="_blank"
+                      class="w3-button w3-border w3-border-teal w3-text-teal w3-round w3-small"
+                      ><i class="fa fa-github"></i> Code</a
+                    >
+                    <a
+                      href="https://juliamooncrystal.github.io/Semana-Dev-em-Dobro-One-Piece/"
+                      target="_blank"
+                      class="w3-button w3-teal w3-round w3-small"
+                      ><i class="fa fa-external-link"></i> Deploy</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-half w3-margin-bottom">
+                <div
+                  class="w3-card w3-border w3-round-large w3-hover-shadow project-card"
+                >
+                  <div class="w3-container w3-padding">
+                    <h6 class="w3-text-teal">
+                      <b><i class="fa fa-tv"></i> Mundo Invertido</b>
+                    </h6>
+                    <p class="w3-small w3-text-grey">
+                      Interface imersiva desenvolvida com conceitos de Front-end
+                      e UX.
+                    </p>
+                    <div class="w3-margin-bottom">
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >HTML5</span
+                      >
+                      <span
+                        class="w3-tag w3-light-grey w3-small w3-text-teal w3-round"
+                        >SEO</span
+                      >
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <a
+                      href="https://github.com/JuliaMoonCrystal/Semana-Frront-end"
+                      target="_blank"
+                      class="w3-button w3-border w3-border-teal w3-text-teal w3-round w3-small"
+                      ><i class="fa fa-github"></i> Code</a
+                    >
+                    <a
+                      href="https://juliamooncrystal.github.io/Semana-Frront-end/"
+                      target="_blank"
+                      class="w3-button w3-teal w3-round w3-small"
+                      ><i class="fa fa-external-link"></i> Deploy</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- End Grid -->
     </div>
 
-    <!-- End Page Container -->
-  </div>
-
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
-    <p>Minhas Redes Sociais</p>
-    <a href="https://github.com/JuliaMoonCrystal" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/julia-farias-da-rocha%F0%9F%9A%80-bb5703180/" target="_blank"><i
-        class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <!-- <a href="LINK_FACEBOOK" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="LINK_INSTAGRAM" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="LINK_TWITTER" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a> -->
-    <p>
-      Powered by
-      <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </p>
-  </footer>
-</body>
-
+    <footer class="w3-container w3-center w3-padding-32">
+      <p class="w3-medium w3-text-grey">Conecte-se comigo</p>
+      <a href="https://github.com/JuliaMoonCrystal" target="_blank"
+        ><i class="fa fa-github w3-hover-opacity w3-xlarge"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/julia-farias-da-rocha%F0%9F%9A%80-bb5703180/"
+        target="_blank"
+        ><i class="fa fa-linkedin w3-hover-opacity w3-xlarge w3-margin-left"></i
+      ></a>
+      <p class="w3-small w3-text-grey">© 2026 Julia Farias da Rocha</p>
+    </footer>
+  </body>
 </html>
